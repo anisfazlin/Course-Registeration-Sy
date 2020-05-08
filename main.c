@@ -2,7 +2,7 @@
 
 int main()
 {
-    int matricnum, credhour, x, i; //x is number of courses
+    int matricnum, credhour, x, i=0; //x is number of courses
     char code;
     /*
     do{
@@ -23,33 +23,37 @@ int main()
     // printf("A- Accounting      B- Business      C- Computing\n");
     // printf("E- Engineering     M- Medicine      P- Pharmacy\n\n");
     
-    // do{
-    //     printf("Enter your number of courses to be taken: ");
-    //  scanf("%d", &x);
+    do{
+         printf("Enter your number of courses to be taken: ");
+      scanf("%d", &x);
     
-    // }while(x>6);
+     }while(x>6);
     
     printf("Enter your code course(s): ");
     scanf("%s", &code);
     
     int totalCred =0;
     fflush(stdout);
-    
-    for(i=0;i<3;i++) {
+
+    while(i<x){
+			
         switch(code) {
         
-        case 'A' : credhour+= 4; break;
-        case 'B' : credhour+= 4; break;
-        case 'C' : credhour+= 5; break;
-        case 'E' : credhour+= 5; break;
-        case 'M' : credhour+= 5; break;
-        case 'P' : credhour+= 5; break;
+        case 'A' : credhour = credhour+4; break;
+        case 'B' : credhour = credhour+4; break;
+        case 'C' : credhour = credhour+5; break;
+        case 'E' : credhour = credhour+5; break;
+        case 'M' : credhour = credhour+5; break;
+        case 'P' : credhour = credhour+5; break;
         
         default : printf("Invalid code!\n");
         // break;
         fflush(stdin);
+				
         }
-        totalCred = totalCred + credhour;
+        totalCred += credhour;
+				
+				i++;
     }
     
     printf("Total cred hours is :%d", totalCred);
