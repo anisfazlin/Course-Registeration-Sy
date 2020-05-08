@@ -28,16 +28,12 @@ int main()
     printf("E- Engineering     M- Medicine      P- Pharmacy\n\n");
 
   do{       
-		i=0;
-		credhour=0;
-		totalCred=0;
-		art=0, sci=0;
+		i=0,credhour=0,totalCred=0,art=0, sci=0;
 		_acc=false, _bus=false, _com=false, _eng=false, _med=false, _pha=false;
 
 		do{
 				printf("Enter your number of courses to be taken: ");
 				scanf("%d", &x);
-				// printf("Value of X is %d\n",x);
 		}while(x>6);
 		
 			for(i=0; i<x; i++){
@@ -115,12 +111,7 @@ int main()
 					printf("Invalid code!\n");
           i--;
 				}
-				fflush(stdin);
-							}
-        // printf("\nCummulative cred hours: %d\n\n",credhour);
-
-		
-    
+			}
 
     printf("\nWould you like to reset OR submit this course registration? \n(1-Reset 2-Submit)\n");
 			scanf("%d", &decide);
@@ -129,9 +120,6 @@ int main()
 
 		
 		totalCred += credhour;
-
-
-    // printf("\nTotal credit hours is :%d", totalCred);
 
 
 // Art -> A - Accounting, B - Business            
@@ -144,8 +132,8 @@ int main()
     if(_med==true) {sci++;}
     if(_pha==true) {sci++;}
 
-    printf("\n\n%d, you have registered %d Art course(s) and %d Science course(s). \nTotal credit hours is %d.", matricnum, art, sci, totalCred);
+  printf("\n\n%d, you have registered %d Art course(s) and %d Science course(s). \nTotal credit hours is %d.", matricnum, art, sci, totalCred);
 
-    return 0;
+  return 0;
   
 }
