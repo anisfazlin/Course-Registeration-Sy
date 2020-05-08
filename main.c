@@ -8,10 +8,9 @@ int main()
 		int art=0, sci=0;
 		bool _acc=false, _bus=false, _com=false, _eng=false, _med=false, _pha=false;
     char code;
-		
     
     do{
-        
+
         printf("Enter your matric number: ");
         scanf("%d", &matricnum);
         
@@ -28,7 +27,13 @@ int main()
     printf("A- Accounting      B- Business      C- Computing\n");
     printf("E- Engineering     M- Medicine      P- Pharmacy\n\n");
 
-  do{
+  do{       
+		i=0;
+		credhour=0;
+		totalCred=0;
+		art=0, sci=0;
+		_acc=false, _bus=false, _com=false, _eng=false, _med=false, _pha=false;
+
 		do{
 				printf("Enter your number of courses to be taken: ");
 				scanf("%d", &x);
@@ -110,7 +115,8 @@ int main()
 					printf("Invalid code!\n");
           i--;
 				}
-			}
+				fflush(stdin);
+							}
         // printf("\nCummulative cred hours: %d\n\n",credhour);
 
 		
