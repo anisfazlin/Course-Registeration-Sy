@@ -1,0 +1,87 @@
+DEPARTMENT OF ICT, CFS IIUM
+SEMESTER 3, SESSION 2019/2020
+
+ICT0544 – INTRO. TO PROGRAMMING
+ASSIGNMENT 2 (32 marks)
+
+QUESTION:
+
+A course registration system is offering several courses under the Arts and Sciences categories.  A student is allowed to choose and register a number of courses (max is six) and the system will count the number of courses in each category.  
+
+Write a C program to check for a valid matric number that contains six digits. Display appropriate message if the matric number is invalid. 
+
+The system will display all courses with their codes as follows:   
+
+	A – Accounting		B – Business 		C – Computing	
+	E – Engineering		M – Medicine		P – Pharmacy
+
+Then, request a user to enter the number of courses and the codes of selected courses.  If a user enters the wrong code, the program will display a warning message “Invalid Code!”. The program will count and display the number of courses registered under the Art and Science categories. (Note:  All courses are under Science category except for Accounting and Business)
+
+The program should:
+1.	print list of courses,
+2.	get the number of courses taken, and
+3.	get the codes, to count the number of courses under each category, and to display the number of registered Art and Science courses for that student.
+The system also calculates total credit hours for the courses registered (credit hour for Art subject is four and Science subject is five).
+A student may decide to reset or submit the registration data (number of courses and course codes).
+
+ 
+Sample output:
+
+Welcome to Course Registration System
+
+Input your 6-digit matric number: 12318
+Not enough digits
+Input your 6-digit matric number: 1231873
+Too many digits
+Input your 6-digit matric number: 123187
+
+A - Accounting          B - Business            C - Computing
+E - Engineering         M - Medicine            P - Pharmacy
+
+Please enter number of courses to be taken: 3
+Enter your course code: A
+Enter your course code: Z
+Invalid Code!
+Enter your course code: A
+You have registered this course. Try another course.
+Enter your course code: E
+Enter your course code: M
+
+Would you like to reset OR submit this course registration? 
+(1-Reset 2-Submit): 2
+
+123187, you have registered 1 Art course(s) and 2 Science course(s). Total credit hours is 14.
+
+Thank you for using this system.
+
+ 
+
+This assignment is evaluated as follows:
+
+Items	Mark
+1.	Flowchart	12
+2.	Source Codes	20
+Total	32
+
+
+INSTRUCTIONS:
+
+1.	Both items (flowchart and source code) must be submitted to the lecturer via email (softcopy). 
+
+•	Email subject: ICT0544 - ASSIGNMENT 2
+•	Save the source code as SectionNo_Assignment2_MatricNo.c 
+o	Example: 400_Assignment2_192020.c
+•	Save the flowchart as SectionNo_Assignment2_MatricNo.docx
+o	Example: 400_Assignment2_192020.docx
+o	You may draw using MS Word or draw on a piece of paper then snap a clear photo of it.
+•	Submit the files to: madam.azimah@gmail.com
+
+DEADLINE: SATURDAY, 9th MAY 2020 BY/BEFORE 5PM
+
+REMINDER:
+
+This is an individual assignment. No team work is assessed this time. No discussion is allowed and do not copy/plagiarize your friend’s work. Cheating is easy, getting caught is easier. If I find two similar codes, both parties will be penalized.
+
+To be truly successful, you must begin with being truthful to yourself. Honesty is success.
+
+😊 GOODLUCK AND HAPPY PROGRAMMING 😊

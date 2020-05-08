@@ -2,7 +2,7 @@
 
 int main()
 {
-    int matricnum, credhour, x, i=0; //x is number of courses
+    int matricnum, credhour=0, totalCred=0, x, i=0; //x is number of courses
     char code;
     /*
     do{
@@ -28,12 +28,9 @@ int main()
       scanf("%d", &x);
       printf("Value of X is %d\n",x);
 	}while(x>6);
-    
-    int totalCred =0;
-    
 		for(i=0; i<x; i++){
 
-			printf("Enter your code course(s): ");
+			printf("Enter your code course(s) #%d: ",i+1);
     	scanf(" %c", &code);
 
         if(code=='A'||code=='a'){
@@ -64,13 +61,14 @@ int main()
 					printf("Invalid code!\n");
           i--;
 				}
+        // printf("\nCummulative cred hours: %d\n\n",credhour);
 
     };
     
-		// totalCred += credhour;
+		totalCred += credhour;
 
 
-    printf("Total cred hours is :%d", totalCred);
+    printf("\nTotal credit hours is :%d", totalCred);
 
     return 0;
 }
