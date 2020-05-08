@@ -23,39 +23,53 @@ int main()
     // printf("A- Accounting      B- Business      C- Computing\n");
     // printf("E- Engineering     M- Medicine      P- Pharmacy\n\n");
     
-    do{
-         printf("Enter your number of courses to be taken: ");
+  do{
+      printf("Enter your number of courses to be taken: ");
       scanf("%d", &x);
-    
-     }while(x>6);
-    
-    printf("Enter your code course(s): ");
-    scanf("%s", &code);
+      printf("Value of X is %d\n",x);
+	}while(x>6);
     
     int totalCred =0;
-    fflush(stdout);
-
-    while(i<x){
-			
-        switch(code) {
-        
-        case 'A' : credhour = credhour+4; break;
-        case 'B' : credhour = credhour+4; break;
-        case 'C' : credhour = credhour+5; break;
-        case 'E' : credhour = credhour+5; break;
-        case 'M' : credhour = credhour+5; break;
-        case 'P' : credhour = credhour+5; break;
-        
-        default : printf("Invalid code!\n");
-        // break;
-        fflush(stdin);
-				
-        }
-        totalCred += credhour;
-				
-				i++;
-    }
     
+		for(i=0; i<x; i++){
+
+			printf("Enter your code course(s): ");
+    	scanf(" %c", &code);
+
+        if(code=='A'||code=='a'){
+					credhour+=4;
+				}
+				
+        else if(code=='B'||code=='b'){
+					credhour+=4;
+				}
+
+				else if(code=='C'||code=='c'){
+					credhour+=5;
+				}
+
+				else if(code=='E'||code=='e'){
+					credhour+=5;
+				}
+
+				else if(code=='M'||code=='m'){
+					credhour+=5;
+				}
+
+				else if(code=='P'||code=='p'){
+					credhour+=5;
+				}
+
+				else{
+					printf("Invalid code!\n");
+          i--;
+				}
+
+    };
+    
+		// totalCred += credhour;
+
+
     printf("Total cred hours is :%d", totalCred);
 
     return 0;
