@@ -3,9 +3,8 @@
 
 int main()
 {
-    int matricnum, x, decide=1; //x is number of courses
-    int i=0, credhour=0, totalCred=0;
-		int art=0, sci=0;
+    int matricnum, x, opt=1; //x is number of courses
+    int i=0, credhour=0, totalCred=0, art=0, sci=0;
 		bool _acc=false, _bus=false, _com=false, _eng=false, _med=false, _pha=false;
     char code;
     
@@ -29,12 +28,12 @@ int main()
 
   do{       
 		i=0,credhour=0,totalCred=0,art=0, sci=0;
-		_acc=false, _bus=false, _com=false, _eng=false, _med=false, _pha=false;
+		_acc=false, _bus=false, _com=false, _eng=false, _med=false, _pha=false;  //to reset the memory of value when resetting
 
 		do{
 				printf("Enter your number of courses to be taken: ");
 				scanf("%d", &x);
-		}while(x>6);
+		}while(x>6); //up to 6 courses only
 		
 			for(i=0; i<x; i++){
 
@@ -114,9 +113,9 @@ int main()
 			}
 
     printf("\nWould you like to reset OR submit this course registration? \n(1-Reset 2-Submit)\n");
-			scanf("%d", &decide);
+			scanf("%d", &opt); //option to decide to submit or reset
 
-		 }while(decide==1);
+		 }while(opt==1);
 
 		
 		totalCred += credhour;
@@ -130,10 +129,11 @@ int main()
     if(_com==true) {sci++;}
     if(_eng==true) {sci++;}
     if(_med==true) {sci++;}
-    if(_pha==true) {sci++;}
+    if(_pha==true) {sci++;} // to catogerized art and science courses
 
-  printf("\n\n%d, you have registered %d Art course(s) and %d Science course(s). \nTotal credit hours is %d.", matricnum, art, sci, totalCred);
+  printf("\n\n%d, you have registered %d Art course(s) and %d Science course(s). \nTotal credit hours is %d.\n\nThank you for using this system.\n", matricnum, art, sci, totalCred);
+
+	printf("\nThank you for using this system.\n");
 
   return 0;
-  
 }
